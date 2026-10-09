@@ -1,0 +1,1 @@
+const msg="مرحبًا، أرغب في حجز موعد في مركز إنجاب مع د/ سلوى محمد عوض.\nالاسم:\nالخدمة أو سبب الزيارة:\nاليوم المفضل:\nالوقت المفضل:\nشكرًا.";const wa="https://wa.me/201070868615?text="+encodeURIComponent(msg);document.querySelectorAll(".wa").forEach(a=>{a.href=wa;a.target="_blank";a.rel="noopener noreferrer"});
