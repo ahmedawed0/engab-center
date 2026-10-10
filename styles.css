@@ -158,3 +158,10 @@ svg.lucide{stroke-width:1.6}
 .video-card>a svg{width:14px;height:14px}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr 1fr;gap:12px}.video-card:last-child{grid-column:1/-1;max-width:50%;width:100%;margin-inline:auto}}
 @media(max-width:520px){.video-grid{grid-template-columns:1fr;max-width:330px}.video-card:last-child{grid-column:auto;max-width:none}}
+
+/* Contact visibility fix */
+.landline-contact{background:rgba(255,255,255,.55);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
+.contact-landline-main{display:block!important;font-size:21px!important;font-weight:700!important;color:var(--primary)!important;margin-top:2px}
+@media(max-width:600px){.landline-contact{padding:13px 14px}.contact-landline-main{font-size:20px!important}}
+.media-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.media-grid{grid-template-columns:1fr}}
