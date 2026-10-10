@@ -172,3 +172,31 @@ svg.lucide{stroke-width:1.6}
 .header-socials a:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-1px)}
 .header-socials svg{width:15px;height:15px}
 @media(max-width:900px){.header-socials{display:none}}
+
+/* Doctor credentials upgrade */
+.doctor-real-photo{position:relative;padding-top:0}
+.doctor-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:90px 18px 18px 18px;background:var(--muted);box-shadow:var(--shadow-soft)}
+.doctor-experience-badge{position:absolute;left:18px;bottom:18px;background:var(--deep);color:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow-float);display:flex;align-items:center;gap:8px}
+.doctor-experience-badge strong{font-size:30px;line-height:1;color:#fff}
+.doctor-experience-badge span{font-size:11px;font-weight:600}
+.doctor-titles{display:grid;gap:10px;margin:20px 0}
+.doctor-titles span{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.8;color:var(--foreground);font-weight:600}
+.doctor-titles svg{width:18px;height:18px;color:var(--primary);flex:0 0 auto;margin-top:3px}
+.credentials-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}
+.credential-card{display:flex;align-items:flex-start;gap:11px;padding:15px;border:1px solid var(--border);background:var(--muted);border-radius:14px}
+.credential-card>svg{width:20px;height:20px;color:var(--primary);flex:0 0 auto;margin-top:2px}
+.credential-card strong{display:block;font-size:11px;line-height:1.7;margin-bottom:4px}
+.credential-card p{font-size:10px!important;line-height:1.8!important;color:var(--muted-foreground)}
+.doctor-memberships{display:flex;flex-wrap:wrap;gap:8px 14px;margin-bottom:18px}
+.doctor-memberships span{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted-foreground)}
+.doctor-memberships svg{width:15px;height:15px;color:var(--primary)}
+.doctor-philosophy{padding-top:16px;border-top:1px solid var(--border);margin-bottom:22px!important}
+@media(max-width:600px){
+ .doctor-real-photo{order:2}
+ .doctor-photo{aspect-ratio:4/5;border-radius:55px 14px 14px 14px}
+ .doctor-experience-badge{left:12px;bottom:12px;padding:11px 14px}
+ .doctor-experience-badge strong{font-size:25px}
+ .credentials-grid{grid-template-columns:1fr;gap:8px}
+ .credential-card{padding:13px}
+ .doctor-titles span{font-size:11px}
+}
