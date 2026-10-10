@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nimble-strudel-96aaea.netlify.app/sitemap.xml
