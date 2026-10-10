@@ -113,3 +113,10 @@ svg.lucide{stroke-width:1.6}
   .whatsapp-float{left:18px!important;bottom:78px!important;width:48px!important;height:48px!important}
   .mobile-booking{z-index:45!important}
 }
+
+/* Approved modest hero */
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(255,255,255,.96) 0%,rgba(255,255,255,.86) 34%,rgba(255,255,255,.35) 58%,rgba(255,255,255,0) 76%);z-index:2;pointer-events:none}
+.hero-inner{z-index:3}
+.hero-image{z-index:1}
+.discover-link{z-index:4}
+@media(max-width:600px){.hero::before{display:none}}
