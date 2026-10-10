@@ -5,3 +5,29 @@ document.addEventListener("DOMContentLoaded",()=>{if(window.lucide)lucide.create
  const img=document.getElementById("heroMain");
  if(img) img.src="data:image/webp;base64,"+parts.join("");
 }catch(e){console.error("Hero image load failed",e);}})();
+
+
+// Privacy-conscious contact interaction events for GA4.
+// This records only the contact method and generic UI placement.
+// No phone numbers, WhatsApp message contents, patient details or medical inquiries are sent.
+document.addEventListener("click", (event) => {
+  const link = event.target.closest && event.target.closest("a[href]");
+  if (!link) return;
+
+  const href = link.getAttribute("href") || "";
+  const isWhatsApp = /^https:\/\/(?:wa\.me|api\.whatsapp\.com)\//i.test(href);
+  const isPhone = /^tel:/i.test(href);
+  if (!isWhatsApp && !isPhone) return;
+
+  const placement = link.closest(".mobile-booking") ? "mobile_booking" :
+    link.closest(".site-header") ? "header" :
+    link.closest(".whatsapp-float") ? "floating" :
+    link.closest(".site-footer") ? "footer" : "page";
+
+  // The GA4 tag will be activated when its measurement ID is provided.
+  if (typeof window.gtag === "function") {
+    window.gtag("event", isWhatsApp ? "whatsapp_click" : "phone_click", {
+      contact_placement: placement
+    });
+  }
+});
