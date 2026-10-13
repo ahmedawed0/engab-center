@@ -260,3 +260,28 @@ svg.lucide{stroke-width:1.6}
 @media(max-width:900px){.sp-nav{gap:12px}.sp-main-grid{gap:30px}.sp-header-book{display:none}.sp-related-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:690px){.service-page .sp-shell{width:calc(100% - 34px)}.sp-header-inner{min-height:70px}.sp-nav{gap:12px}.sp-nav a{font-size:10px}.sp-nav a:nth-child(3){display:none}.sp-brand-main{font-size:17px}.sp-brand small{font-size:8px}.sp-hero{padding:24px 0 48px}.sp-breadcrumb{margin-bottom:28px}.sp-hero h1{font-size:29px;line-height:1.65}.sp-lead{font-size:13px;line-height:2.1}.sp-hero-actions{gap:8px}.sp-btn{padding:12px 16px;font-size:11px}.sp-main-grid{grid-template-columns:1fr;gap:36px}.sp-main-section{padding:46px 0}.sp-copy-section h2{font-size:20px}.sp-copy-section p{font-size:13px}.sp-aside{grid-template-columns:1fr 1fr}.sp-info-card{padding:15px}.sp-info-card h2{font-size:14px}.sp-info-card img{height:170px}.sp-faq{padding:45px 0}.sp-faq h2,.sp-related h2{font-size:22px}.sp-faq-grid{grid-template-columns:1fr}.sp-related-grid{grid-template-columns:1fr}.sp-cta h2{font-size:23px}.local-explainer{grid-template-columns:1fr;padding:19px;gap:14px}.footer-services{justify-content:flex-start}}
 @media(max-width:420px){.sp-aside{grid-template-columns:1fr}.sp-nav a:nth-child(4){display:none}.sp-hero-actions .sp-btn{width:100%}}
+
+/* Brand name and attending physician — homepage and service pages */
+.brand-text .brand-specialty{color:var(--primary);font-size:10px;line-height:1.5;font-weight:700;letter-spacing:0}
+.brand-text .brand-doctor{color:var(--deep);font-size:11px;line-height:1.5;font-weight:600;letter-spacing:0}
+.sp-brand .sp-brand-specialty{font-size:10px;color:var(--primary);font-weight:700;line-height:1.5}
+.sp-brand .sp-brand-doctor{font-size:10px;color:var(--deep);font-weight:600;line-height:1.5}
+@media(max-width:1100px) and (min-width:801px){
+ .brand-text strong{font-size:27px}
+ .header-inner{gap:14px}
+ .desktop-nav{gap:12px}
+}
+@media(max-width:600px){
+ .brand-text strong{font-size:22px}
+ .brand-text .brand-specialty{font-size:9px;line-height:1.45}
+ .brand-text .brand-doctor{font-size:9px;line-height:1.45}
+ .sp-brand .sp-brand-specialty,.sp-brand .sp-brand-doctor{font-size:9px}
+ .header-inner{min-height:80px;height:auto;padding-block:7px}
+}
+@media(max-width:375px){
+ .header-inner{gap:6px}
+ .brand-symbol{width:30px}
+ .brand-text strong{font-size:20px}
+ .header-actions .booking-button{padding-inline:9px;font-size:9px}
+ .sp-nav{gap:8px}
+}
