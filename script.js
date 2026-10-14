@@ -27,7 +27,9 @@ document.addEventListener("click", (event) => {
   // The GA4 tag will be activated when its measurement ID is provided.
   if (typeof window.gtag === "function") {
     window.gtag("event", isWhatsApp ? "whatsapp_click" : "phone_click", {
-      contact_placement: placement
+      contact_placement: placement,
+      // Send contact-click events only to GA4, not to the Ads destination.
+      send_to: 'G-HQF995FKQG'
     });
   }
 });
