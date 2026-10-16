@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",()=>{if(window.lucide)lucide.create
 
 
 // Privacy-conscious contact interaction events for GA4.
-// This records only the contact method and generic UI placement.
+// This records only contact/directions actions and generic UI placement.
 // No phone numbers, WhatsApp message contents, patient details or medical inquiries are sent.
 document.addEventListener("click", (event) => {
   const link = event.target.closest && event.target.closest("a[href]");
@@ -17,7 +17,8 @@ document.addEventListener("click", (event) => {
   const href = link.getAttribute("href") || "";
   const isWhatsApp = /^https:\/\/(?:wa\.me|api\.whatsapp\.com)\//i.test(href);
   const isPhone = /^tel:/i.test(href);
-  if (!isWhatsApp && !isPhone) return;
+  const isDirections = /^https:\/\/(?:maps\.app\.goo\.gl\/|(?:www\.)?google\.com\/maps(?:\/|\?|$))/i.test(href);
+  if (!isWhatsApp && !isPhone && !isDirections) return;
 
   const placement = link.closest(".mobile-booking") ? "mobile_booking" :
     link.closest(".site-header") ? "header" :
@@ -26,8 +27,8 @@ document.addEventListener("click", (event) => {
 
   // The GA4 tag will be activated when its measurement ID is provided.
   if (typeof window.gtag === "function") {
-    window.gtag("event", isWhatsApp ? "whatsapp_click" : "phone_click", {
-      contact_placement: placement,
+    window.gtag("event", isWhatsApp ? "whatsapp_click" : isPhone ? "phone_click" : "directions_click", {
+      contact_placement: isDirections ? "address" : placement,
       // Send contact-click events only to GA4, not to the Ads destination.
       send_to: 'G-HQF995FKQG'
     });
