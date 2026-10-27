@@ -35,12 +35,34 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="service-page">
-<header class="sp-header">
-  <div class="sp-shell sp-header-inner">
-   <a class="sp-brand" href="/" aria-label="العودة إلى مركز إنجاب الطبي للنساء والتوليد"><span class="sp-brand-main">مركز <strong>إنجاب</strong></span><span class="sp-brand-specialty">الطبي للنساء والتوليد</span><span class="sp-brand-doctor">د/ سلوى محمد عوض</span></a>
-   <nav class="sp-nav" aria-label="روابط الموقع"><a href="/">الرئيسية</a><a href="/#services">خدماتنا</a><a href="/#doctor">عن د/ سلوى</a><a href="/#contact">العنوان</a></nav>
-   <a class="sp-btn sp-btn-primary sp-header-book" href="https://wa.me/201070868615?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%B1%D9%83%D8%B2%20%D8%A5%D9%86%D8%AC%D8%A7%D8%A8%20%D9%85%D8%B9%20%D8%AF%2F%20%D8%B3%D9%84%D9%88%D9%89%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%88%D8%B6.%0A%D8%A7%D9%84%D8%A7%D8%B3%D9%85%3A%0A%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%88%20%D8%B3%D8%A8%D8%A8%20%D8%A7%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%3A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%A7%D9%84%D9%88%D9%82%D8%AA%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%B4%D9%83%D8%B1%D9%8B%D8%A7." target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> احجزي استشارتكِ</a>
+<header class="site-header">
+  <div class="page-container header-inner">
+    <a class="header-brand" href="/" aria-label="مركز إنجاب الطبي للنساء والتوليد - الرئيسية">
+      <span class="header-brand-name">مركز <strong>إنجاب</strong></span>
+      <span class="header-brand-specialty">الطبي للنساء والتوليد</span>
+      <span class="header-brand-doctor">د/ سلوى محمد عوض</span>
+    </a>
+    <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+      <a href="/">الرئيسية</a>
+      <a href="/#services" class="active">خدماتنا</a>
+      <a href="/#doctor">عن د/ سلوى</a>
+      <a href="/#contact">العنوان</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-booking" href="https://wa.me/201070868615?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%B1%D9%83%D8%B2%20%D8%A5%D9%86%D8%AC%D8%A7%D8%A8%20%D9%85%D8%B9%20%D8%AF%2F%20%D8%B3%D9%84%D9%88%D9%89%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%88%D8%B6.%0A%D8%A7%D9%84%D8%A7%D8%B3%D9%85%3A%0A%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%88%20%D8%B3%D8%A8%D8%A8%20%D8%A7%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%3A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%A7%D9%84%D9%88%D9%82%D8%AA%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%B4%D9%83%D8%B1%D9%8B%D8%A7." target="_blank" rel="noopener noreferrer">احجزي الآن</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-controls="mobile-navigation" aria-expanded="false">
+        <svg class="header-menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+      </button>
+    </div>
   </div>
+  <nav id="mobile-navigation" class="mobile-nav" aria-label="التنقل على الهاتف" hidden>
+      <a href="/">الرئيسية</a>
+      <a href="/#services">خدماتنا</a>
+      <a href="/#doctor">عن د/ سلوى</a>
+      <a href="/#faq">الأسئلة الشائعة</a>
+      <a href="/#videos">فيديوهات</a>
+      <a href="/#contact">العنوان</a>
+  </nav>
 </header>
 <main>
   <section class="sp-hero"><div class="sp-shell">
@@ -101,7 +123,11 @@
     <a class="sp-btn sp-btn-white" href="https://wa.me/201070868615?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%B1%D9%83%D8%B2%20%D8%A5%D9%86%D8%AC%D8%A7%D8%A8%20%D9%85%D8%B9%20%D8%AF%2F%20%D8%B3%D9%84%D9%88%D9%89%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%88%D8%B6.%0A%D8%A7%D9%84%D8%A7%D8%B3%D9%85%3A%0A%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%88%20%D8%B3%D8%A8%D8%A8%20%D8%A7%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%3A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%A7%D9%84%D9%88%D9%82%D8%AA%20%D8%A7%D9%84%D9%85%D9%81%D8%B6%D9%84%3A%0A%D8%B4%D9%83%D8%B1%D9%8B%D8%A7." target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> اسألي عن المواعيد عبر واتساب</a>
   </div></section>
 </main>
-<footer class="sp-footer"><div class="sp-shell"><div class="sp-footer-links"><a href="/">مركز إنجاب الطبي للنساء والتوليد</a><a href="/#doctor">عن الطبيبة</a><a href="/#services">الخدمات</a><a href="/#contact">اتصلي بنا</a></div><p>دكرنس، الدقهلية – شارع مجلس المدينة – برج رضا سامي – الدور الأول – بجوار حلواني أبو عطوة</p><small>هذه المعلومات عامة ولا تُغني عن الاستشارة والفحص الطبي. © 2026 مركز إنجاب</small></div></footer>
+<footer class="sp-footer"><div class="sp-shell"><nav class="sp-footer-socials" aria-label="مواقع التواصل الاجتماعي">
+  <a href="https://www.facebook.com/Enjab.Dr.Salwa.Mohamed.Awad" target="_blank" rel="noopener noreferrer">فيسبوك</a>
+  <a href="https://www.instagram.com/enjab_center/" target="_blank" rel="noopener noreferrer">إنستغرام</a>
+  <a href="https://www.youtube.com/@مركزانجاب1" target="_blank" rel="noopener noreferrer">يوتيوب</a>
+</nav><div class="sp-footer-links"><a href="/">مركز إنجاب الطبي للنساء والتوليد</a><a href="/#doctor">عن الطبيبة</a><a href="/#services">الخدمات</a><a href="/#contact">اتصلي بنا</a></div><p>دكرنس، الدقهلية – شارع مجلس المدينة – برج رضا سامي – الدور الأول – بجوار حلواني أبو عطوة</p><small>هذه المعلومات عامة ولا تُغني عن الاستشارة والفحص الطبي. © 2026 مركز إنجاب</small></div></footer>
 <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 <script src="/script.js"></script>
 </body></html>

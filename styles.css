@@ -1,4 +1,6 @@
 :root {
+ --font-sans: Alexandria, "Noto Sans Arabic", sans-serif;
+ --font-display: Alexandria, "Noto Sans Arabic", sans-serif;
  --background: oklch(1 0 0); --foreground: oklch(.29 .08 327);
  --primary: oklch(.49 .19 347); --primary-foreground: oklch(1 0 0);
  --secondary: oklch(.97 .017 355); --muted: oklch(.98 .007 340);
@@ -284,6 +286,49 @@ svg.lucide{stroke-width:1.6}
  .brand-text strong{font-size:20px}
  .header-actions .booking-button{padding-inline:9px;font-size:9px}
  .sp-nav{gap:8px}
+}
+
+/* Shared header for the homepage and service pages. */
+.site-header { background: #fff; }
+.site-header .header-inner { width: min(1120px, calc(100% - 60px)); height: 78px; min-height: 78px; padding-block: 0; gap: 24px; }
+.header-brand { display: flex; flex-direction: column; flex-shrink: 0; color: var(--deep); line-height: 1.5; }
+.header-brand-name { font-size: 21px; font-weight: 600; }
+.header-brand-name strong { color: var(--primary); font-weight: 800; }
+.header-brand-specialty { color: var(--primary); font-size: 10px; font-weight: 700; }
+.header-brand-doctor { color: var(--deep); font-size: 10px; font-weight: 600; }
+.site-header .desktop-nav { display: flex; align-items: center; gap: 24px; }
+.site-header .desktop-nav a { color: var(--foreground); font-size: 12px; font-weight: 500; border-bottom: 2px solid transparent; }
+.site-header .desktop-nav a:hover, .site-header .desktop-nav a.active { color: var(--primary); }
+.site-header .desktop-nav a.active { border-bottom-color: var(--primary); }
+.site-header .header-actions { flex-shrink: 0; gap: 10px; }
+.header-booking { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 11px 19px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 600; white-space: nowrap; transition: background .2s; }
+.header-booking:hover { background: var(--deep); }
+.site-header .menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: #fff; color: var(--deep); cursor: pointer; }
+.site-header .menu-toggle:hover, .site-header .menu-toggle[aria-expanded="true"] { color: var(--primary); background: var(--secondary); }
+.header-menu-icon { display: block; width: 22px; height: 22px; }
+.site-header .menu-toggle:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.site-header .mobile-nav { display: none; position: absolute; top: 100%; inset-inline: 0; padding: 12px max(17px, calc((100% - 1120px) / 2)); background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-soft); max-height: calc(100dvh - 74px); overflow-y: auto; }
+.site-header .mobile-nav[hidden] { display: none; }
+.site-header .mobile-nav a { min-height: 44px; align-items: center; padding: 12px; border-radius: 8px; color: var(--foreground); font-size: 12px; font-weight: 500; }
+.site-header .mobile-nav a:hover, .site-header .mobile-nav a.active { background: var(--secondary); color: var(--primary); }
+.sp-footer-socials { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 20px; margin-block: 12px; }
+.sp-footer-socials a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-size: 11px; font-weight: 500; }
+.sp-footer-socials a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+ .site-header .header-inner { width: calc(100% - 34px); min-height: 74px; height: auto; padding-block: 8px; gap: 12px; }
+ .site-header .desktop-nav { display: none; }
+ .site-header .menu-toggle { display: inline-flex; }
+ .site-header .mobile-nav:not([hidden]) { display: grid; gap: 4px; }
+ .header-brand-name { font-size: 19px; }
+ .header-brand-specialty, .header-brand-doctor { font-size: 9px; }
+ .header-booking { padding-inline: 15px; }
+}
+@media (max-width: 360px) {
+ .site-header .header-inner { gap: 8px; }
+ .site-header .header-actions { gap: 6px; }
+ .header-brand-name { font-size: 18px; }
+ .header-brand-specialty, .header-brand-doctor { font-size: 8px; }
+ .header-booking { padding-inline: 10px; font-size: 10px; }
 }
 
 /* Doctor-led welcoming banner */

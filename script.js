@@ -1,4 +1,36 @@
-document.addEventListener("DOMContentLoaded",()=>{if(window.lucide)lucide.createIcons();const b=document.getElementById("menuToggle"),n=document.getElementById("mobile-navigation");if(b&&n){b.addEventListener("click",()=>{n.hidden=!n.hidden;b.setAttribute("aria-expanded",String(!n.hidden));});n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>n.hidden=true));}});
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.lucide) window.lucide.createIcons();
+
+  const toggle = document.getElementById("menuToggle");
+  const navigation = document.getElementById("mobile-navigation");
+  if (!toggle || !navigation) return;
+
+  const setMenuOpen = (open) => {
+    navigation.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "إغلاق القائمة" : "فتح القائمة");
+  };
+
+  setMenuOpen(false);
+  toggle.addEventListener("click", () => setMenuOpen(navigation.hidden));
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !navigation.hidden) {
+      setMenuOpen(false);
+      toggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!navigation.hidden && !navigation.contains(event.target) && !toggle.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", (event) => {
+    if (event.matches) setMenuOpen(false);
+  });
+});
 // approved-hero-loader
 (async()=>{if(!document.getElementById('heroMain'))return;try{
  const parts=await Promise.all([1,2,3,4,5,6].map(i=>fetch(`assets/hero-b64-${i}.txt?v=1`).then(r=>{if(!r.ok)throw new Error("hero");return r.text()})));
