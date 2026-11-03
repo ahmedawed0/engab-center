@@ -1,4 +1,6 @@
 :root {
+ --font-sans: "Alexandria", "Noto Sans Arabic", sans-serif;
+ --font-display: "Alexandria", "Noto Sans Arabic", sans-serif;
  --background: oklch(1 0 0); --foreground: oklch(.29 .08 327);
  --primary: oklch(.49 .19 347); --primary-foreground: oklch(1 0 0);
  --secondary: oklch(.97 .017 355); --muted: oklch(.98 .007 340);
