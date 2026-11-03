@@ -14,6 +14,8 @@
 * { box-sizing: border-box; border-color: var(--border); }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+.clinic-site { font-family: var(--font-sans); }
+button, input, select, textarea { font-family: inherit; }
 a { text-decoration: none; } button, a { -webkit-tap-highlight-color: transparent; }
 a:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
 h1,h2,h3,p { margin: 0; } h1,h2,h3 { font-family: var(--font-display); letter-spacing: 0; }
@@ -293,10 +295,10 @@ svg.lucide{stroke-width:1.6}
 .enjab-banner-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:70px;align-items:center;padding-block:64px 72px}
 .enjab-banner-copy{position:relative;z-index:2}
 .enjab-banner-eyebrow{display:inline-block;color:#8b275f;font-size:12px;font-weight:600;margin-bottom:22px}
-.enjab-banner h1{font-size:clamp(35px,3.7vw,54px);line-height:1.6;font-weight:600;color:#432342;margin:0 0 20px}
+.enjab-banner h1{font-size:clamp(35px,3.7vw,54px);line-height:1.6;font-weight:700;color:#432342;margin:0 0 20px}
 .enjab-banner h1 em{font-style:normal;color:#96356d}
 .enjab-banner-doctor{font-size:20px;font-weight:600;color:#623253;margin-bottom:14px}
-.enjab-banner-intro{font-size:14px;color:#73616d;line-height:2}
+.enjab-banner-intro{font-size:15px;color:#73616d;line-height:2.15}
 .enjab-banner-services{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .enjab-banner-services span{font-size:10px;color:#75435f;background:#fff9;border:1px solid #e9d7e2;border-radius:30px;padding:7px 11px}
 .enjab-banner-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
@@ -314,5 +316,5 @@ svg.lucide{stroke-width:1.6}
 .enjab-banner-caption small{font-size:10px;color:#786271}
 .enjab-banner-flower{position:absolute;top:28px;left:-8px;font-size:65px;line-height:1;color:#b47a9c;transform:rotate(12deg)}
 @media(max-width:1000px){.enjab-banner-grid{gap:30px;padding-block:45px 55px}.enjab-banner h1{font-size:36px}.enjab-banner-actions{gap:8px}.enjab-banner-actions .clinic-btn{padding-inline:16px;font-size:12px}}
-@media(max-width:700px){.enjab-banner-grid{grid-template-columns:1fr;gap:32px;padding-block:30px 38px}.enjab-banner-eyebrow{font-size:10px;margin-bottom:14px}.enjab-banner h1{font-size:32px;line-height:1.55;margin-bottom:14px}.enjab-banner-doctor{font-size:17px;margin-bottom:10px}.enjab-banner-intro{font-size:12px}.enjab-banner-services{margin-top:16px;gap:6px}.enjab-banner-services span{font-size:9px;padding:6px 9px}.enjab-banner-actions{margin-top:20px;flex-wrap:nowrap}.enjab-banner-actions .clinic-btn{font-size:11px;height:46px;padding-inline:14px}.enjab-banner-location{margin-top:17px;font-size:10px}.enjab-banner-location small{font-size:9px}.enjab-banner-visual{max-width:330px;padding-inline:18px}.enjab-banner-caption{right:28px;left:0;padding:14px 18px}.enjab-banner-caption strong{font-size:16px}.enjab-banner-flower{font-size:50px;left:0}}
+@media(max-width:700px){.enjab-banner-grid{grid-template-columns:1fr;gap:32px;padding-block:30px 38px}.enjab-banner-eyebrow{font-size:12px;margin-bottom:14px}.enjab-banner h1{font-size:29px;line-height:1.65;margin-bottom:14px}.enjab-banner-doctor{font-size:17px;margin-bottom:10px}.enjab-banner-intro{font-size:13px;line-height:2.1}.enjab-banner-services{margin-top:16px;gap:6px}.enjab-banner-services span{font-size:10px;padding:6px 9px}.enjab-banner-actions{margin-top:20px;flex-wrap:nowrap}.enjab-banner-actions .clinic-btn{font-size:11px;height:46px;padding-inline:14px}.enjab-banner-location{margin-top:17px;font-size:10px}.enjab-banner-location small{font-size:9px}.enjab-banner-visual{max-width:330px;padding-inline:18px}.enjab-banner-caption{right:28px;left:0;padding:14px 18px}.enjab-banner-caption strong{font-size:16px}.enjab-banner-flower{font-size:50px;left:0}}
 @media(max-width:360px){.enjab-banner h1{font-size:28px}.enjab-banner-actions .clinic-btn{font-size:10px;padding-inline:10px;gap:5px}}
